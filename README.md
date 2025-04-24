@@ -8,15 +8,15 @@ The project is implemented using the Godot engine.
 The project is in an early stage of development.
 
 ## Features
-- Create named data collections
+- Create named data collections;
 - Define custom data models with flexible structures:
-- Basic properties (string, number, boolean, etc.)
-- Arrays and nested objects.
-- Instantiate and manage objects from defined models.
+	- Basic properties (string, number, boolean, etc.);
+	- Arrays and nested objects;
+- Instantiate and manage objects from defined models;
 - Export collections or individual objects to:
-* JSON
-* XML
-* YAML
+	- JSON;
+	- XML;
+	- YAML.
 
 ## License
 This project is distributed under the BSD-3 license.
