@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://4fg5gm71dk4m" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://17tjuc68ifk" path="res://scripts/menu_bar.gd" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://bqs8kok6541cg" path="res://scripts/left_container.gd" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://d0m1p1vj03rj6" path="res://scripts/right_container.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://bqs8kok6541cg" path="res://scripts/containers/left_container.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://d0m1p1vj03rj6" path="res://scripts/containers/right_container.gd" id="4_1bvp3"]
 
 [node name="Main" type="PanelContainer"]
 anchors_preset = 15

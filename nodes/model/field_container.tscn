@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cora0en1clqca"]
+
+[ext_resource type="Script" uid="uid://coleoa0c5nbvt" path="res://scripts/containers/field_container.gd" id="1_opt7a"]
+
+[node name="FieldContainer" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_opt7a")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="Type" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="Required" type="CheckBox" parent="."]
+layout_mode = 2
