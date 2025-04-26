@@ -10,15 +10,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_opt7a")
 
-[node name="Name" type="Label" parent="."]
+[node name="Name" type="TextEdit" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
 
-[node name="Type" type="Label" parent="."]
+[node name="Type" type="OptionButton" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
 
 [node name="Required" type="CheckBox" parent="."]
 layout_mode = 2
+
+[node name="RemoveButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+text = "-"
