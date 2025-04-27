@@ -1,6 +1,6 @@
 class_name FieldContainer
 extends HBoxContainer
-## The container of a field for the model definition.
+## The container of a field for the struct definition.
 
 
 ## Sets the field data in the container.

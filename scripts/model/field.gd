@@ -1,6 +1,6 @@
 class_name Field
 extends RefCounted
-## A class respresenting a model field.
+## A class respresenting a struct field.
 
 
 ## The dicitonary of the primitive types names.

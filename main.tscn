@@ -41,12 +41,12 @@ split_offset = 250
 layout_mode = 2
 script = ExtResource("3_h2yge")
 
-[node name="ModelButton" type="Button" parent="MainContainer/ScrollContainer/HSplitContainer/LeftContainer"]
+[node name="StructButton" type="Button" parent="MainContainer/ScrollContainer/HSplitContainer/LeftContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "+"
 
-[node name="ModelTree" type="Tree" parent="MainContainer/ScrollContainer/HSplitContainer/LeftContainer"]
+[node name="StructTree" type="Tree" parent="MainContainer/ScrollContainer/HSplitContainer/LeftContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

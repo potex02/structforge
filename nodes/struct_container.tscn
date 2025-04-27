@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://be031tnck4wex"]
+
+[ext_resource type="Script" uid="uid://cpo0u82uep0el" path="res://scripts/containers/struct_container.gd" id="1_2l70t"]
+
+[node name="StructContainer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2l70t")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FieldsContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Save a struct"
+text = "Save"
+
+[node name="FieldButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Add a field"
+text = "Add field"
+
+[connection signal="pressed" from="HBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/FieldButton" to="." method="_on_field_button_pressed"]
