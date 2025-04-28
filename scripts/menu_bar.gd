@@ -13,4 +13,4 @@ func connect_actions() -> void:
 	event.key_label = KEY_O
 	event.command_or_control_autoremap = true
 	file.set_item_shortcut(0, open_action)
-	file.index_pressed.connect(func(index: int): print(index))
+	file.index_pressed.connect(func(index: int) -> void: print(index))

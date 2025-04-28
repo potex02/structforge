@@ -13,7 +13,7 @@ signal element_clicked(element: Variant)
 
 ## Connects the button signal to the action.
 func _ready() -> void:
-	self._tree.button_clicked.connect(func(item: TreeItem, column: int, id: int, mouse_button_index: int):
+	self._tree.button_clicked.connect(func(item: TreeItem, column: int, id: int, mouse_button_index: int) -> void:
 		if mouse_button_index != 1:
 			return
 		match id:
@@ -26,7 +26,7 @@ func _ready() -> void:
 	)
 	self._root = self._tree.create_item()
 	self._tree.hide_root = true
-	$StructButton.pressed.connect(func():
+	$StructButton.pressed.connect(func() -> void:
 		
 		var struct_item: TreeItem = self._tree.create_item(self._root)
 		var struct_container: StructContainer = preload("res://nodes/struct_container.tscn").instantiate()

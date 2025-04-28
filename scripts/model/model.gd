@@ -14,7 +14,6 @@ var _structs: Dictionary[int, Struct]
 ## Saves a struct.
 func save_struct(name: int, struct: Struct) -> void:
 	self._structs[name] = struct
-	print(self._structs)
 
 
 ## Gets the mext struct id.

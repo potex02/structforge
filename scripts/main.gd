@@ -13,6 +13,6 @@ extends Control
 func _ready() -> void:
 	self.get_window().min_size = Vector2i(400, 400)
 	self._main_menu_bar.connect_actions()
-	self._left_container.element_clicked.connect(func(element: Variant):
+	self._left_container.element_clicked.connect(func(element: Variant) -> void:
 		self._right_container.set_content(element.container)
 	)
