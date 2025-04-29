@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxric8yymf21p"]
+
+[ext_resource type="Script" uid="uid://c7kcmux4h6527" path="res://scripts/containers/instance_container.gd" id="1_cjexl"]
+
+[node name="StructContainer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cjexl")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FieldsContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Save a struct"
+text = "Save"
+
+[connection signal="pressed" from="SaveButton" to="." method="_on_save_button_pressed"]

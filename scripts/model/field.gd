@@ -9,6 +9,8 @@ const PRIMITIVE_TYPES: Dictionary[int, String] = {
 	TYPE_FLOAT: "Float",
 	TYPE_BOOL: "Bool",
 	TYPE_STRING: "String",
+	TYPE_ARRAY: "Array",
+	TYPE_DICTIONARY: "Dictionary"
 }
 ## The field name.
 var name: String

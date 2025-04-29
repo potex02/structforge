@@ -20,7 +20,9 @@ func _ready() -> void:
 			0:
 				self.element_clicked.emit(item.get_metadata(0))
 			1:
-				if item.get_metadata(0).container is Node:
+				self._create_instance(item)
+			2:
+				if item.get_metadata(0) and item.get_metadata(0).container is Node:
 					item.get_metadata(0).container.queue_free()
 				item.free()
 	)
@@ -39,5 +41,21 @@ func _ready() -> void:
 			id = Model.model.next_struct_id(),
 			container = struct_container
 		})
-		struct_item.add_button(0, preload("res://assets/remove.svg"), 1, false, "Remove the struct")
+		struct_item.add_button(0, preload("res://assets/add.svg"), 1, false, "Add an instance")
+		struct_item.add_button(0, preload("res://assets/remove.svg"), 2, false, "Remove the struct")
 	)
+
+
+## Creates an instance.
+func _create_instance(struct_item: TreeItem) -> void:
+	
+	var instance_item: TreeItem = self._tree.create_item(struct_item)
+	var instance_container: InstanceContainer = preload("res://nodes/instance_container.tscn").instantiate()
+	
+	instance_item.set_text(0, "New instance")
+	instance_item.set_metadata(0, {
+		id = Model.model.next_instance_id(),
+		container = instance_container
+	})
+	instance_item.add_button(0, preload("res://assets/edit.svg"), 0, false, "Edit the instance")
+	instance_item.add_button(0, preload("res://assets/remove.svg"), 2, false, "Remove the struct")
