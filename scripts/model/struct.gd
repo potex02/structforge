@@ -13,3 +13,13 @@ var _fields: Array[Field]
 func _init(name: String, fields: Array[Field]) -> void:
 	self._name = name
 	self._fields = fields
+
+
+## Gets the containers for the struct values.
+func get_values_containers() -> Array[ValueContainer]:
+	
+	var result: Array[ValueContainer]
+	
+	for i in self._fields:
+		result.append(i.get_value_container())
+	return result

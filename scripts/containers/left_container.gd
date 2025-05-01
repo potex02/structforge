@@ -52,6 +52,8 @@ func _create_instance(struct_item: TreeItem) -> void:
 	var instance_item: TreeItem = self._tree.create_item(struct_item)
 	var instance_container: InstanceContainer = preload("res://nodes/instance_container.tscn").instantiate()
 	
+	instance_container.item = instance_item
+	instance_container.struct_id = struct_item.get_metadata(0).id
 	instance_item.set_text(0, "New instance")
 	instance_item.set_metadata(0, {
 		id = Model.model.next_instance_id(),

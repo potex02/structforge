@@ -11,11 +11,23 @@ var _struct_id: int = 0
 var _instance_id: int = 0
 ## The saved structs.
 var _structs: Dictionary[int, Struct]
+## The saved instances.
+var _instances: Dictionary[int, Instance]
+
+
+## Gets a struct.
+func get_struct(id: int) -> Struct:
+	return self._structs.get(id, null)
 
 
 ## Saves a struct.
-func save_struct(name: int, struct: Struct) -> void:
-	self._structs[name] = struct
+func save_struct(id: int, struct: Struct) -> void:
+	self._structs[id] = struct
+
+
+## Saves an instance.
+func save_instance(id: int, instance: Instance) -> void:
+	self._instances[id] = instance
 
 
 ## Gets the mext struct id.

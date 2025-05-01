@@ -16,3 +16,8 @@ func _ready() -> void:
 	self._left_container.element_clicked.connect(func(element: Variant) -> void:
 		self._right_container.set_content(element.container)
 	)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		print(inst_to_dict(Model.model))
