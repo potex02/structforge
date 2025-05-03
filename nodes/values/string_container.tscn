@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt233tqf4kfqn"]
+[gd_scene load_steps=2 format=3 uid="uid://dymmq14kof1by"]
 
 [ext_resource type="Script" uid="uid://dnhj337degtuh" path="res://scripts/containers/value_container.gd" id="1_6wnyw"]
 
-[node name="ValueContainer" type="HBoxContainer"]
+[node name="StringContainer" type="HBoxContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,7 +15,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Name"
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "Value"

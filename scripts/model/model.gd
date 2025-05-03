@@ -25,6 +25,11 @@ func save_struct(id: int, struct: Struct) -> void:
 	self._structs[id] = struct
 
 
+## Gets an instance.
+func get_instance(id: int) -> Instance:
+	return self._instances.get(id, null)
+
+
 ## Saves an instance.
 func save_instance(id: int, instance: Instance) -> void:
 	self._instances[id] = instance

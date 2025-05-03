@@ -3,8 +3,6 @@ extends RefCounted
 ## A class respresenting a struct field.
 
 
-## The value container node.
-const VALUE_CONTAINER_NODE: PackedScene = preload("res://nodes/value_container.tscn")
 ## The dicitonary of the primitive types names.
 const PRIMITIVE_TYPES: Dictionary[int, String] = {
 	TYPE_MAX: "Variant",
@@ -29,11 +27,3 @@ func _init(name: String, type: int, required: bool) -> void:
 	self.name = name
 	self.type = type
 	self.required = required
-
-
-## Creates a container for edit the field.
-func get_value_container() -> ValueContainer:
-	
-	var container: ValueContainer = Field.VALUE_CONTAINER_NODE.instantiate()
-	
-	return container

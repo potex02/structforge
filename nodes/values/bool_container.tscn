@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://knon6annl86i"]
+
+[ext_resource type="Script" uid="uid://dnhj337degtuh" path="res://scripts/containers/value_container.gd" id="1_eat6o"]
+
+[node name="BoolContainer" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eat6o")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3

@@ -16,10 +16,16 @@ func _init(name: String, fields: Array[Field]) -> void:
 
 
 ## Gets the containers for the struct values.
-func get_values_containers() -> Array[ValueContainer]:
+func get_values_containers(instance: Instance) -> Array[ValueContainer]:
 	
 	var result: Array[ValueContainer]
 	
+	instance = self._validate_instance(instance)
 	for i in self._fields:
-		result.append(i.get_value_container())
+		result.append(ValueContainer.create(i))
 	return result
+
+
+## Validates an instance shape.
+func _validate_instance(instance: Instance) -> Instance:
+	return instance
